@@ -1,22 +1,20 @@
-var num = 1;                                         // A
-while (num < 6)                                      // B
-{
-  console.log("I'm counting! The number is " + num); // C
-  num = num + 1;                                     // D
-}
-          // E
-
-
-
-
 var days = 60;
 
-while (days > 4){
+while (days > 30){
 
   console.log(days + " days until my birthday. Such a long time... :(" )
 
   days= days -1;
 }
+
+while (days > 5){
+
+  console.log(days + " days until my birthday ..it is getting closer!!" )
+
+  days= days -1;
+}
+
+
 
 while (days > 1){
 
