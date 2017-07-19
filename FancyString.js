@@ -1,24 +1,13 @@
-// var num=[1,2,3,4,5];
-//
-// for (var i=0; i < num.length; i++){
-//
-//   console.log(num[i]);
-// }
+var names=["Eric","James","John","Tom","Bob"];
 
-
-var names=["Eric","James","Gott","Tom","Bob"];
-
-function fancystring(fancy,names) {
+function fancystring(fancy,names,truth) {
 
   for (var i=0; i < names.length; i++){
 
+    if (truth=false){console.log(i+fancy+names[i]) }
 
-  console.log(i,fancy,names[i])
+    else {console.log(names[i]+fancy+i) }
+  }
 }
 
-
-}
-
-
-
-fancystring("->",names)
+fancystring("->",names,true)
