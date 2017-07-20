@@ -22,7 +22,11 @@ while (quarters > 0){
 
     quarters--;}
 
-    console.log(quarters+ " quarters left");
+    if (quarters===1){
+      console.log(quarters+ " quarter left");
+    }
+
+    else { console.log(quarters+ " quarters left");}
 
 }
 
