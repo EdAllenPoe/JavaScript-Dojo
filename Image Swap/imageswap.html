@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery Tester</title>
+    <link rel="stylesheet" type="text/css" href="imageswap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      $('img').click(function() {
+         $(this).attr('src', $(this).attr('data-alt-src'));
+});
+
+
+
+    });
+    </script>
+  </head>
+
+  <body>
+
+
+    <img src='dracula1.png' data-alt-src='wolfman1.png' />
+    <img src='dracula2.png' data-alt-src='wolfman2.png' />
+    <img src='dracula3.png' data-alt-src='wolfman3.png' />
+    <img src='dracula4.png' data-alt-src='wolfman4.png' />
+    <img src='dracula5.png' data-alt-src='wolfman5.png' />
+
+  </body>
