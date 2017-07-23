@@ -9,12 +9,4 @@ for(var i=0; i < students.length; i++){
 
 console.log((students[i].first_name),(students[i].last_name));
 
-
-
-// students=(students[i]);
-
-
-
 }
-
-// console.log(students.first_name,students.last_name)

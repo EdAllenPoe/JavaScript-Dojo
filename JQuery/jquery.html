@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Jquery Tester</title>
+    <link rel="stylesheet" type="text/css" href="jquery.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+
+        $("#hide").click(function(){
+            $("#hideme").hide();
+        });
+
+        $("#show").click(function(){
+            $("#hideme").show();
+        });
+
+        $('#alerty').click(function(){
+         alert("You have clicked a button!");
+        });
+
+        $('#addaclass').click(function(){
+          $("#changecolor").addClass('red');
+        });
+
+        $('#toggler').click(function(){
+          $("#toggleghost").toggle();
+        });
+
+        $('#slidedown').click(function(){
+          $("#slideaway").slideDown();
+        });
+
+        $('#slideup').click(function(){
+          $("#slideaway").slideUp();
+        });
+
+        $('#toggleslider').click(function(){
+          $("#toggleme").slideToggle();
+        });
+
+        $('#fader').click(function(){
+          $("#fademe").fadeIn(1000);
+        });
+
+        $('#fadeouter').click(function(){
+          $("#fademe").fadeOut(1000);
+        });
+
+        $('#beforeme').click(function(){
+          $("#textbefore").before("<p style=display:inline-block;>POOF!! Text BEFORE!!</p>");
+        });
+
+        $('#afterme').click(function(){
+          $("#textbefore").after("<p style=display:inline-block;>POOF!! Text AFTER!!</p>");
+        });
+
+        $('#appendme').click(function(){
+          $("#appended").append("<p>YAY!! a BUDDY!</p>");
+        });
+
+        $('#addhtml').click(function(){
+          $("#htmladd").html("<p>Now I look GREAT!!</p>");
+        });
+
+        $('#attributed').click(function(){
+          $("#attr").attr("width","250","height","90");
+        });
+
+        $('#addvalue').click(function(){
+          $("#addval").val("What a Great Value!!");
+        });
+
+        $('#texter').click(function(){
+          $("#changetext").text ("This text is much better");
+        });
+
+        $("#olddata").click(function(){
+        $("div").data("data", "Hi");
+        });
+        $("#moredata").click(function(){
+        $("div").data("data", "Hi Dude!!");
+        });
+        $("#newdata").click(function(){
+            alert($("#datadiv").data("data"));
+        });
+
+    });
+    </script>
+  </head>
+  <body
+
+
+    <div id="main">
+
+      <div id="header">
+        <h2>jQuery Fucntion Extravaganza!!</h2>
+      </div>
+
+      <div class="titlebox">
+        <h1>.click</h1>
+      </div>
+
+      <div class="querybox1">
+        <button id="alerty"type="button" name="button">Click here to see an alert</button>
+      </div>
+
+      <div class="titlebox">
+        <h1>.hide/.show</h1>
+      </div>
+
+      <div class="querybox2" >
+        <button id="hide"type="button" name="button">Click here to hide</button>
+        <button id="show"type="button" name="button">Click here to show</button>
+        <p id="hideme">hide me/show me</p>
+      </div>
+
+      <div class="titlebox">
+        <h1>.addclass</h1>
+      </div>
+
+      <div class="querybox1">
+        <button id="addaclass"type="button" name="button">Click to watch magic text</button>
+        <p id="changecolor">MAGIC (addclass) TEXT!!</p>
+      </div>
+
+      <div class="titlebox">
+        <h1>.toggle</h1>
+      </div>
+
+      <div class="querybox2" >
+        <button id="toggler"type="button" name="button">Toggle me scary</button>
+        <img id="toggleghost"src="ghost.gif" alt="ghost">
+      </div>
+
+      <div class="titlebox">
+        <h1>.slideUp/.slideDown</h1>
+      </div>
+
+      <div class="querybox1">
+        <button id="slidedown"type="button" name="button">Slide Down</button>
+        <button id="slideup"type="button" name="button">Slide Up</button>
+        <p id="slideaway">Slide me away, please!!</p>
+      </div>
+
+      <div class="titlebox">
+        <h1>.slideToggle</h1>
+      </div>
+
+      <div class="querybox2" >
+        <button id="toggleslider"type="button" name="button">Slide Toggle A-Rama</button>
+        <p id="toggleme">Slide Toggle Text</p>
+      </div>
+
+      <div class="titlebox">
+        <h1>.fadeIn/.fadeOut</h1>
+      </div>
+
+      <div class="querybox1">
+        <button id="fader"type="button" name="button">Fade In Button</button>
+        <button id="fadeouter"type="button" name="button">Fade Out Button</button>
+        <div id="fademe" style="width:80px;height:80px;display:none;background-color:red;">
+      </div>
+     </div>
+
+     <div class="titlebox">
+       <h1>.before/.after</h1>
+     </div>
+
+
+      <div id="beforebox"class="querybox2" >
+        <button id="beforeme"type="button" name="button">Add Text Before!!</button>
+        <button id="afterme"type="button" name="button">Add Text After!!</button>
+        <p id="textbefore">Keep Your Eyes On This TEXT!!</p>
+      </div>
+
+      <div class="titlebox">
+        <h1>.append</h1>
+      </div>
+
+      <div class="querybox1">
+        <button id="appendme"type="button" name="button">Give a text a friend</button>
+        <p id="appended">This text seems lonely..please click button</p>
+      </div>
+
+      <div class="titlebox">
+        <h1>.html</h1>
+      </div>
+
+      <div class="querybox2" >
+        <button id="addhtml"type="button" name="button">Paragraph Facelift Button</button>
+        <p id="htmladd">I need an html facelift</p>
+      </div>
+
+      <div class="titlebox">
+        <h1>.attr</h1>
+      </div>
+
+      <div class="querybox1">
+        <button id="attributed"type="button" name="button">Attribute Stretch Button</button>
+        <img id="attr"src="stretcharmstrong.png" alt="stretch armstrong">
+      </div>
+
+      <div class="titlebox">
+        <h1>.val</h1>
+      </div>
+
+      <div class="querybox2" >
+        <p id="val" >Value: <input id="addval" type="text" name="user"></p>
+        <button id="addvalue"type="button" name="button">Add a Value</button>
+      </div>
+
+      <div class="titlebox">
+        <h1>.text</h1>
+      </div>
+
+      <div class="querybox1">
+        <button id="texter"type="button" name="button">Chage the Text</button>
+        <p id="changetext">This text kind of sucks</p>
+      </div>
+
+      <div class="titlebox">
+        <h1>.data</h1>
+      </div>
+
+      <div class="querybox2" >
+        <button id="olddata"type="button" name="button">Add "Hi" to Alert</button>
+        <button id="moredata"type="button" name="button">Add "Dude" to Alert</button>
+        <button id="newdata"type="button" name="button">Check Alert Box Data</button>
+        <div id="datadiv"></div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

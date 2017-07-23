@@ -1,0 +1,49 @@
+#wrapper{
+  background-color: grey;
+  width:700px;
+  height: 600px;
+  padding-top: 1px;
+  border-radius: 20px;
+  margin:auto;
+}
+
+#head{
+  width:625px;
+  height:40px;
+  color:#446b36;
+  font-size: 35px;
+  background-color:#2b3a26;
+  border-radius: 10px;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#main{
+   margin: auto;
+  width:625px;
+  height:475px;
+  background-image: url("stormy.jpg");
+  border-radius:20px;
+}
+
+.frankbox{
+  width:121px;
+  height:200px;
+  display: inline-block;
+}
+
+input{
+  margin-left:300px;
+  border-radius:5px;
+  background-color:#c9d7ed ;
+  color:black;
+  font-weight: bold;
+  height:30px;
+  width:100px;
+}
+
+img{
+  margin-top: 25px;
+}
