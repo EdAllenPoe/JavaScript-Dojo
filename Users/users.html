@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Users Assigment</title>
+    <link rel="stylesheet" type="text/css" href="users.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+
+      $('form').on('submit', function (event) {
+        event.preventDefault();
+        var first = $('form').find('.first[type="text"]').val();
+        var last = $('form').find('.last[type="text"]').val();
+        var mail = $('form').find('.mail[type="text"]').val();
+        var contact = $('form').find('.contact[type="text"]').val();
+        $('#first').append('<tr><td>' + first + '</td></tr>')
+        $('#last').append('<tr><td>' + last + '</td></tr>')
+        $('#mail').append('<tr><td>' + mail + '</td></tr>')
+        $('#contact').append('<tr><td>' + contact + '</td></tr>')
+        });
+      });
+    </script>
+
+  </head>
+
+  <body>
+
+    <table>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Address</th>
+        <th>Contact Number</th>
+      </tr>
+      <tr>
+        <td id="first"></td>
+        <td id="last"></td>
+        <td id="mail"></td>
+        <td id="contact"></td>
+      </tr>
+    </table>
+
+    <h1>Add User</h1>
+
+    <form action="process.php" method="post">
+      First Name <input class="first" type="text" name="first_name">
+      Last Name <input class="last" type="text" name="last_name">
+      Email Address <input class="mail"type="text" name="email_address">
+      Contact Number <input class="contact" type="text" name="contact_number">
+      <button type="submit" value="Submit">Add User</button>
+    </form>
+
+  </body>
+</html>

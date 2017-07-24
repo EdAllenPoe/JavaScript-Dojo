@@ -1,0 +1,47 @@
+h1{
+border-bottom: solid black 2px;
+width:175px;
+}
+
+table{
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+th{
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  height:25px;
+  width:125px;
+
+}
+tr{
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  height:25px;
+  width:125px;
+}
+
+td{
+
+  border-style: solid;
+  border-width: 1px;
+  border-color: black;
+  height:25px;
+  width:125px;
+
+}
+
+
+
+
+input{display: block;}
+
+button{
+  width:75px;
+  height:25px;
+  margin-top:10px;
+}
