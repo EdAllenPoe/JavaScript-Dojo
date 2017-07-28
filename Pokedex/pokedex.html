@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon Project</title>
+    <link rel="stylesheet" type="text/css" href="pokemon.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      for (i=1; i< 152; i++){
+        url='<img id='+i+" "+'src='+"http://pokeapi.co/media/img/"+i+".png"+">"
+        console.log(url)
+        $("#images").append (url);
+      }
+
+      $("img").on ('click',function(){
+     var id = $(this).attr("id");
+     alert(id);
+     var url="http://pokeapi.co/api/v2/pokemon/"+id+"/";
+     console.log(url);
+
+     $.get("http://pokeapi.co/api/v1/pokemon/"+id+"/", function(res) {
+                   console.log(res);
+      $("#info").append("<h2>"+res.abilities[0].name+"</h2>");
+      $("#info").append('<img id='+i+" "+'src='+"http://pokeapi.co/media/img/"+id+".png"+">")
+               }, "json");
+      });
+
+      console.log(url);
+    });
+    </script>
+  </head>
+  <body>
+    <div id="images"></div>
+    <div id="info"></div>
+  </body>
+</html>
