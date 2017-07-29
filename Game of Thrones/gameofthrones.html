@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Game of Thrones</title>
+
+    <link rel="stylesheet" type="text/css" href="gameofthrones.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+    $(document).ready(function() {
+
+      $("img").on ('click',function(){
+     var id = $(this).attr("id");
+    //  alert(id);
+
+    //  for(var i=1;i<400;i++)
+     //
+    //  var url="https://anapioficeandfire.com/api/houses/"+id+"/";
+    //  console.log(url);
+    //  for(var i=1;i<400;i++){
+    //   console.log(i);
+     //
+    //  }
+     $.get("https://anapioficeandfire.com/api/houses/"+id+"/", function(res) {
+
+
+                   console.log(res);
+                   $("#info").append("<h2>"+"Name :"+res.name+"</h2>");
+                   $("#info").append("<h2>"+"Words :"+res.words+"</h2>");
+                   $("#info").append("<h2>"+"Titles :"+res.titles+"</h2>");
+                            }, "json");
+        });
+      });
+</script>
+
+  </head>
+  <body>
+    <div id="main">
+      <img id="362" src="stark.jpg" alt="stark">
+      <img id="378"src="targaryen.jpg" alt="tararyen">
+      <img id="229"src="lannister.jpg" alt="lannister">
+      <img id="17" src="baratheon.png" alt="baratheon">
+      <div id="info">
+        <h1>House Details</h1>
+      </div>
+    </div>
+
+
+  </body>
+</html>
