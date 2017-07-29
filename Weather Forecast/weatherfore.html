@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" type="text/css" href="weatherfore.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+
+    $(document).ready(function() {
+    $('form').submit(function() {
+      // alert("clicked");
+
+      var city = $('form').find('#city[type="text"]').val();
+      // alert(city);
+        $.get("http://api.openweathermap.org/data/2.5/forecast/daily?q="+city+"id=524901&APPID=db6173871036db6ad149a10df3d208f3"+'&units=imperial', function(res) {
+            // console.log(res);
+            $("#weather").append("<h2>"+res.city.name+"</h2>");
+            $("#weather").append("<h2>"+"Temperature: "+res.list[0].temp.day+"</h2>");
+        }, 'json');
+        // don't forget to return false so the page doesn't refresh
+        return false;
+    });
+});
+
+</script>
+  </head>
+  <body>
+    <form action="">
+
+      <input id="city" type="text" placeholder="City Name Here">
+      <button id="button" type="submit">Click For Temperature</button>
+
+      <div id="weather">
+
+      </div>
+    </form>
+
+  </body>
+</html>
+
+
+<!-- http://api.openweathermap.org/data/2.5/forecast/daily?id=524901&APPID=db6173871036db6ad149a10df3d208f3
+// Make sure to put your unique API key in the URL (taking out the brackets).
+// &APPID={INSERTAPIKEY} will need to be at the end of each URL you access below and in the assignment. -->
+
+<!-- http://api.openweathermap.org/data/2.5/forecast/daily?q=Los Angelesid=524901&APPID=db6173871036db6ad149a10df3d208f3 -->
