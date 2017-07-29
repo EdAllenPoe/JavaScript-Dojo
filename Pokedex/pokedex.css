@@ -1,0 +1,27 @@
+
+
+#info{
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 10px;
+  width:250px;
+  height:500px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #bbbbbb;
+
+}
+
+h2{
+  font-size: 40;
+}
+
+#images{
+  display:inline-block;
+  width:850px;
+}
+
+h2{text-align: center;
+}
+
+img{margin-left: 20px;}
